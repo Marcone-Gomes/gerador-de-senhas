@@ -7,6 +7,7 @@ btnEl.addEventListener("click", () => {
 });
 copyiconEl.addEventListener("click", () => {
     copypassword();
+    alertContainerEl.classList.remove("active");
 });
 
 
@@ -20,7 +21,9 @@ function createPassword() {
     }
     
     inputEl.value = password;
-    alertContainerEl.innerText = password + "Senha copiada com sucesso!";
+    alertContainerEl.innerText = inputEl.value + "Copiada!";
+    
+    
 }
  
 function copypassword() {
@@ -28,4 +31,4 @@ function copypassword() {
     inputEl.setSelectionRange(0, 9999);
     navigator.clipboard.writeText(inputEl.value);
     
-    }
+}
