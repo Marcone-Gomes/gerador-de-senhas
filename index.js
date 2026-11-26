@@ -7,7 +7,12 @@ btnEl.addEventListener("click", () => {
 });
 copyiconEl.addEventListener("click", () => {
     copypassword();
+    if (inputEl.value) {
     alertContainerEl.classList.remove("active");
+    setTimeout(() => {
+        alertContainerEl.classList.add("active");
+}, 2000);
+}
 });
 
 
